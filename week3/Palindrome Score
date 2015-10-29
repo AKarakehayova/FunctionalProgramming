@@ -1,5 +1,5 @@
 #lang racket
-(require "next-hack.rkt")
+(require "hack-numbers.rkt")
 (require "binary.rkt")
 (define (p-score n)
   (if (is-palindrome? (~a n)) 1
