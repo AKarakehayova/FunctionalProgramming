@@ -1,5 +1,4 @@
 #lang racket
-(require "fence.rkt")
 (require "binary.rkt")
 
 (define (next-hack n)
