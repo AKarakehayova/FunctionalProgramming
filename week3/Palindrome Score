@@ -1,0 +1,7 @@
+#lang racket
+(require "next-hack.rkt")
+(require "binary.rkt")
+(define (p-score n)
+  (if (is-palindrome? (~a n)) 1
+    (+ 1 (p-score (+ n (string->number (string-reverse (~a n))))))))
+      
