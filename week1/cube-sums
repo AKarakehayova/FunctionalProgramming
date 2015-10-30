@@ -1,0 +1,17 @@
+#lang racket
+(define (cube a)
+  (* a a a)
+  )
+ (define (sum-cubes a b)
+  (+ (cube a) (cube b))
+  )
+
+(define (cube-sums? n)
+ 
+  (define (helper a b)
+    (cond [(= (sum-cubes a b) n) #t]
+           [(and (< (cube a) n) (< (sum-cubes a b) n)) (helper a (+ b 1))]
+           [(and (> (sum-cubes a b) n) (< (cube a) n)) (helper (+ a 1) 1)]
+           [else #f]))
+    (helper 1 1)
+  )
