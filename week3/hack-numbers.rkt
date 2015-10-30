@@ -17,5 +17,6 @@
    )
   (helper n 0 0))
 
+(provide is-palindrome?)
 (define (is-palindrome? str)
   (string=? str (string-reverse str)))
