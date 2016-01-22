@@ -1,0 +1,13 @@
+suffix :: (Eq a, Num a) => [a] -> [a] -> Bool
+suffix xs ys = null (filter (/= 0)  (zipWith (-) xs yss))
+  where
+    l = length ys - length xs
+    yss = drop l ys
+
+suffix' :: (Eq a) => [a] -> [a] -> Bool
+suffix' xs ys
+    |xs == yss = True
+    |otherwise = False
+    where
+        len = length ys - length xs
+        yss = drop len ys
