@@ -25,13 +25,6 @@
 (define (leaf? tree)
   (and (empty-tree? (right tree)) (empty-tree? (left tree))   ))
 
-(define t
-  (make-tree 1
-    (make-tree 2
-      (make-leaf 5)
-      (make-leaf 6))
-    (make-leaf 3)))
-
 (define (deep-map f l)
   (cond
     [(null? l) (list)]
